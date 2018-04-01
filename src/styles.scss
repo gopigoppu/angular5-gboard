@@ -4,9 +4,9 @@
 
 body{
   height: 100vh;
-   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top,#43cea2, #185a9d);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top,#43cea2, #185a9d);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #1D8FE1;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom,#22E1FF 0%, #1D8FE1 48%, #625EB1 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 

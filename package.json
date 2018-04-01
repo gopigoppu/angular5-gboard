@@ -4,8 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "run-s build start:server",
+    "start:server": "node src/server/index.js",
+    "watch:client": "ng serve --proxy-config proxy.conf.json --open",
+    "watch:server": "nodemon src/server/index.js",
+    "watch": "run-p watch:*",
     "build": "ng build --prod",
+    "sample": "node src/server/data/seed-db.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,6 +28,7 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "bcrypt": "^1.0.3",
     "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
     "ng-http-loader": "^0.9.0",

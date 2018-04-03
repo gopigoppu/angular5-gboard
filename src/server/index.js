@@ -8,6 +8,13 @@ app.use(bodyParser.json());
 // app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/profiles', express.static(path.join(__dirname, 'profiles')));
 
+app.use(function (req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+
 require('dotenv').config();
 
 let database;
@@ -48,3 +55,14 @@ app.post('/api/contacts', (req, res) => {
     return res.status(201).json(newRecord);
   })
 });
+
+
+
+app.get('/api/gusers', (req, res) => {
+  const gusersCollection = database.collection('gusers');
+
+  gusersCollection.find({}).toArray((err, docs) => {
+    return res.json(docs);
+  });
+});
+

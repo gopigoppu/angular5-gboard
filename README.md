@@ -7,8 +7,38 @@ You can fork and use it if you wanted.
 ## Technologies used
 
 Backend - Express.js
+
 DB Connectivity - MLAP
+
 Frontend - Angular 5
+
+
+### Application is splitted as two parts. 
+
+    ==> #1.Client(Angular app)
+    ==> #2.Server(Express app)
+
+## How to run setup
+
+### #1 Clone/Fork this repository.
+
+### #2 Run 
+    npm install
+
+### #3 For Backend run 
+    nodemon src/server/index.js
+
+You can  access application in 3000 port. E.g [http://localhost:3000](http://localhost:3000)
+
+`index.js` is your express root file. So, you can start working in this file.
+
+### #4 For Frontend run 
+    ng serve
+
+You can  access application in 4200 port. E.g [http://localhost:4200](http://localhost:4200)
+
+
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.

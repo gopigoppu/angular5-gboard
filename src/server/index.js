@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/profiles', express.static(path.join(__dirname, 'profiles')));
+// app.use(express.static(path.join(__dirname, 'public')));
+// app.use('/profiles', express.static(path.join(__dirname, 'profiles')));
 
 require('dotenv').config();
 
@@ -30,9 +30,9 @@ app.get('/api/contacts', (req, res) => {
   });
 });
 
-app.get('*', (req, res) => {
-  return res.sendFile(path.join(__dirname, 'public/index.html'));
-});
+// app.get('*', (req, res) => {
+//   return res.sendFile(path.join(__dirname, 'public/index.html'));
+// });
 
 app.post('/api/contacts', (req, res) => {
   const user = req.body;

@@ -1,5 +1,16 @@
 # Gboard
 
+Its an test app for integrating express with angular 5 in single webpack bundler.
+
+You can fork and use it if you wanted.
+
+## Technologies used
+
+Backend - Express.js
+DB Connectivity - MLAP
+Frontend - Angular 5
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
